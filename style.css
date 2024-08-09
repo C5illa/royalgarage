@@ -184,7 +184,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 3rem;
+    padding: 3rem 2rem 3rem 2rem;
  }
   
   .hero__text {
@@ -203,6 +203,7 @@
     font-size: clamp(14px, 5vw, 19px);
     line-height: 1.15;
     letter-spacing: 2.5px;
+    padding-top: 2rem;
   }
 
   .hero__text--small {
@@ -552,19 +553,21 @@
     width: 75%;
     padding: .9rem;
     text-align: center;
+    font-family: var(--body-font);
   }
   
   .footer__menu ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: min(5vw, 16px);
   }
   
   .footer__menu--link {
     text-decoration: none;
     font-family: var(--heading-font);
-    font-weight: 650;
-    font-size: min(5vw, 15px);
+    font-weight: 800;
+    font-size: min(5vw, 14.5px);
     color: var(--background-color);
   }
   
