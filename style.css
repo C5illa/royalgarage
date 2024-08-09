@@ -5,8 +5,8 @@
 :root {
     --font-grey:            #E0E0E0;
     --font-grey-hover:      #BABABA;
-    --background-color:     #1A1C1E;
-    --services-background:  #000000;
+    --background-color:     #1B1D1E;
+    --services-background:  #101010;
     --yellow:               #FFC733;
     --heading-font:         "Montserrat", system-ui;
     --body-font:            "Source Sans 3", sans-serif;
@@ -68,15 +68,19 @@
     font-weight: 650;
     text-transform: uppercase;
     line-height: 1.3;
-    letter-spacing: .5px;
+    text-align: center;
+  }
+
+  h3 {
+    padding: .5rem 0 1rem 0;
   }
 
   
-  h1 { font-size: clamp(14px, 5.5vw, 28px); }
+  h1 { font-size: clamp(14px, 5vw, 26px); }
   
-  h2 { font-size: clamp(12px, 3vw, 24px);   }
+  h2 { font-size: clamp(12px, 3vw, 23px);   }
   
-  h3 { font-size: clamp(10px, 2.2vw, 20px); } 
+  h3 { font-size: clamp(10px, 4vw, 18px); } 
   
   
   
@@ -88,7 +92,7 @@
   
   html {
     font-size:   min(3.2vw, 14px);
-    font-weight: 300;
+    font-weight: 400;
     font-family: var(--body-font);
     color:       var(--font-grey);
   }
@@ -197,7 +201,7 @@
 
   .hero__text--normal {
     font-weight: 600;
-    font-size: 19px;
+    font-size: clamp(14px, 5vw, 19px);
     line-height: 1.15;
     letter-spacing: 2.5px;
   }
@@ -285,25 +289,150 @@
     #ABOUT
   \*------------------------------------*/
   
-  
+  .about {
+    background-color: var(--yellow);
+    color: var(--background-color);
+    padding: 2rem;
+    text-align: center;
+    line-height: 1.35;
+  }
+
+  .about h1 {
+    padding-bottom: .9rem;
+    font-weight: 800;
+  }
+
+  .about__text {
+    font-weight: 500;
+    font-size: clamp(13px, 4vw, 16px);
+    padding: 1.5rem;
+  }
   
   
   /*------------------------------------*\
     #SERVICES
   \*------------------------------------*/
   
- 
+  #services {
+    text-align: center;
+  }
+
+  #services h1 {
+    padding: 3rem;
+    color: var(--yellow);
+  }
+
+  .services__container {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 15px;
+    row-gap: 15px;
+    place-items: stretch;
+    padding-bottom: 1em;
+    }
+  
+  .services__item {
+    background-color: var(--services-background);
+    border-radius: 25px;
+    padding: 1.5rem;
+  }
+
+  .services__item:hover {
+    transform: scale(1.01);
+  }
+
+  .services__item--text {
+    line-height: 1.3;
+    font-weight: 450;
+    font-size: clamp(13px, 4vw, 16px);
+    color: var(--font-grey-hover);
+  }
+  
+  @media (max-width: 900px) {
+    
+  .services__container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  @media (max-width: 640px) {
+    
+    .services__container {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(6, 1fr);
+    }
+}
   
   
   
-  
-  
+
+
   /*------------------------------------*\
     #CONTACT
   \*------------------------------------*/
   
+  #contact {
+    background-color: var(--yellow);
+    color: var(--background-color);
+    margin-top: 3rem;
+  }
+
+  .contact__yellow--items {
+    width: 100%;
+    background-color: var(--yellow);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .contact__item {
+    padding: 1rem;
+    color: var(--background-color);
+  }
+
+  .contact__item--icon {
+    width: 90px;
+  }
+
+  .contact__text--big {
+    font-size: clamp(18px, 5vw, 28px);
+    font-family: var(--heading-font);
+    font-weight: 800;
+  }
+
+  .contact__text--small {
+    font-size: clamp(10px, 4vw, 16px);
+    font-weight: 500;
+  }
+
+  .contact__dark-bg {
+   background-color: var(--services-background);
+   text-align: center;
+  }
+
+  .contact__yellow-bg h1 {
+   font-weight: 800;
+   padding-top:3rem;
+  }
   
-  
+  .contact__dark-bg {
+    background-color: var(--background-color);
+    color: var(--yellow);
+  }
+
+  .contact__icon li {
+    display: inline;
+  }
+
+  .contact__icon--fb, .contact__icon--map, .contact__icon--mail {
+    width: 60px;
+  }
   
   
   /*------------------------------------*\
