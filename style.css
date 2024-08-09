@@ -64,7 +64,7 @@
   
   h1, h2, h3 {
     font-family: var(--heading-font);
-    font-weight: bold;
+    font-weight: 600;
     text-transform: uppercase;
   }
 
@@ -85,7 +85,7 @@
   
   html {
     font-size:   min(3.2vw, 14px);
-    font-weight: light;
+    font-weight: 300;
     font-family: var(--body-font);
     color:       var(--font-grey);
   }
@@ -215,9 +215,10 @@
     #MAIN CONTENT
   \*------------------------------------*/
   
-  main {
+  body {
     width: 100%;
     margin: 0 auto;
+    background-color: var(--background-color);
   }
   
   
@@ -270,67 +271,66 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 1rem;
+    padding: .8rem;
   }
   
-  .footer__content {
+  .footer__menu {
     text-transform: uppercase;
-    width: 80%;
-    padding: 1rem;
+    width: 75%;
+    padding: .9rem;
     text-align: center;
   }
   
-  .footer__content ul {
+  .footer__menu ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   
-  .footer__content--link {
+  .footer__menu--link {
     text-decoration: none;
-    font-size: clamp(10px, 1.1rem, 14px);
-    font-weight: 450;
+    font-family: var(--heading-font);
+    font-weight: 650;
+    font-size: min(5vw, 15px);
     color: var(--background-color);
   }
   
-  .footer__content li:hover {
-    transform: scale(1.06);
-    transform-origin: center center;
+  .footer__menu li:hover {
+    transform: scale(1.02);
   }
   
   .footer__up {
     display: flex;
     justify-content: end;
-    filter: var(--png-light-filter);
   }
   
   #up-button {
-    width: 3.5rem;
+    width: 3.2rem;
     padding: .5rem;
   }
   
   #up-button:hover {
-    transform: translateY(-4px);
+    transform: translateY(-2px);
   }
   
   .footer__logo {
-    height: 17px;
-    margin: 0px 0px 2.7px 0px;
+    height: 18px;
+    margin: 0px 0px 4px 0px;
   }
   
   .footer__copyright {
-    padding: .5rem;
-    margin-top: .5rem;
+    font-family: var(--heading-font);
+    width: 100%;
+    font-size: 10px;
+    font-weight: 600;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
-    width: 95%;
-    font-size: 10px;
+    justify-content: center;    
   }
   
   .footer__copyright--left, .footer__up {
-    width: calc(50% - 280px);
+    width: calc(50% - 35px);
   }
   
   .footer__copyright--date {
@@ -339,6 +339,7 @@
   }
   
   .footer__copyright--center {
+    text-align: center;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -351,28 +352,38 @@
   
   
   
-  @media (max-width: 910px) {
+  @media (max-width: 760px) {
     
-  .footer__content ul {
+  .footer__menu ul {
     flex-direction: column;
     align-items: center;
   }
   
   
-  .footer__content li {
-    padding-top: .6rem;
+  .footer__menu li {
+    padding-top: .65rem;
   }
+
+  .footer__copyright--center {
+    flex-direction: column;
+    padding-top: 1rem;
+    font-size: 8px;
+  }
+
   }
   
   
   
   
   
-  @media (max-width: 480px) {
+  @media (max-width: 400px) {
   
   .footer__copyright--center {
     flex-direction: column;
   }
+
+  
+
   }
 
 
@@ -385,11 +396,11 @@
   
   .impresszum__mail--link {
     text-decoration: none;
-    color: var(--font-color);
+    color: var(--font-grey);
   }
   
   .impresszum__mail--link:hover {
-    color: var(--font-color-hover);
+    color: var(--yellow);
   }
 
   .overlay {
@@ -399,7 +410,7 @@
     left: 0;
     right: 0;
     z-index: 1;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.9);
     transition: opacity 500ms;
     visibility: hidden;
     opacity: 0;
@@ -410,86 +421,68 @@
     opacity: 1;
   }
   
-  .popup__about-me, .popup__impresszum {
+  .popup__impresszum {
     margin: 40px auto;
     padding: 30px;
-    background: #ffffff;
+    background: rgba(0,0,0,0.8);
+    box-shadow: 0 4px 25px 0 rgba(45,45,45,0.3);
     border-radius: 5px;
     width: 50vw;
     position: relative;
+    color: var(--font-grey);
+    font-family: var(--body-font);
+    text-align: center;
+    line-height: 1.3rem;
   }
   
-  .popup__impresszum h2 {
-    margin-top: 0;
-    text-transform: uppercase;
-    text-align: center;
-    font-family: var(--font-pair);
-    font-weight: bold;
-    
-  }
   .popup__impresszum .close {
     position: absolute;
     top: 20px;
     right: 30px;
     transition: all 200ms;
     font-size: 30px;
-    font-weight: bold;
+    font-weight: 600;
     text-decoration: none;
-    color: var(--font-color);
+    color: var(--font-grey);
   }
   
   .popup__impresszum .close:hover {
-    color: rgba(10, 21, 34, .7);
+    color: var(--yellow);
     transform: scale(1.1);
   }
-  
-  .popup__impresszum .content {
-    text-align: center;
-    line-height: 1.3rem;
-  }
-  
-  .popup__impresszum p {
-    padding-bottom: 1rem;
+ 
+  .impresszum__content {
+    color: var(--font-grey);
   }
   
   .popup__button {
     text-decoration: none;
-    color: var(--secondary-color);
-    font-family: var(--font-pair);
+    font-family: var(--heading-font);
     text-transform: uppercase;
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: 600;
   }
   
   .popup__button:hover {
-    color: var(--secondary-color-hover);
+    color: var(--yellow);
     font-size: 1.02rem;
   }
   
-  .profile__name {
-    font-family: var(--font-pair);
-    font-weight: 800;
-  }
-  
-  .profile__tag, .impresszum__tag {
-    font-family: var(--font-pair);
+  .impresszum__heading {
+    margin-top: 0;
     text-transform: uppercase;
-  }
-  
-  .popup__impresszum {
-    color: var(--font-color);
-  }
-  
-  .impresszum__tag {
+    font-family: var(--heading-font);
+    color: var(--font-grey);
+    font-weight: 600;
     padding: 1rem;
   }
   
   .impresszum__header--bold {
-    font-weight: bold;
-  }
-  
-  .profile-pic {
-    width: 111px;
+    color: var(--yellow);
+    font-weight: 750;
+    text-transform: uppercase;
+    padding-top: 18px;
+    padding-bottom: 3px;
   }
   
   @media screen and (max-width: 732px){
