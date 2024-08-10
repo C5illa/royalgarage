@@ -82,7 +82,8 @@
 
   h1 {
     font-size: clamp(18px, 4.5vw, 28px);
-    line-height: 1.4;
+    line-height: 1.25;
+    letter-spacing: 0.5px;
     text-align: center;
     text-transform: uppercase;
     font-weight: 700;
@@ -91,17 +92,20 @@
   }
     
   h2 {
-    text-align: center;
-    font-family: var(--font-pair);
+    text-align: left;
+    font-family: var(--heading-font);
+    font-size: clamp(12px, 3.5vw, 16px);
+    font-weight: 600;
+    margin-top: -1.5rem;
+  }
+
+  h2:hover {
     color: var(--font-grey-hover);
-    text-transform: uppercase;
-    font-size: 1.3em;
-    padding-bottom: 3em;
   }
     
   h3 {
-    font-size: 1em;
-    padding-bottom: 1.2em;
+    font-size: clamp(12px, 3vw, 14px);
+    padding-bottom: 1.2rem;
     padding-top: 1.8em;
     font-weight: bold;
   }
@@ -113,26 +117,31 @@
     padding-bottom: 1.5rem;
   }
   
- .text__center {
+  .text__center {
+    font-size: clamp(12px, 3vw, 15px);
     text-align: center;
     font-weight: 600;
-    font-size: clamp(12px, 3vw, 15px);
-}
+  }
 
-.text__bold {
+  .text__bold {
     font-weight: 550;
     text-align: center;
-}
+  }
 
-li {
-    list-style: inside;
-    margin-left: 15px;
-}
+  li {
+    list-style: outside;
+    margin-left: 30px;
+  }
 
-li li {
+  li li {
     list-style: url('assets/icon_wrench.svg');
-    margin-left: 50px;
-}
+    margin-left: 80px;
+  }
+
+  p, li {
+  font-family: var(--body-font);
+  font-size: clamp(12px, 3vw, 15px);
+  }
 
 
 
@@ -197,15 +206,4 @@ li li {
   .button__back:hover {
     transform: translateX(-5px);
     filter: var(--yellow-filter);
-  }
-  
-
-  
-  
-  
-  @media (max-width: 860px) {
-  
-  p, li {
-    font-size: .9em;
-  }
   }
