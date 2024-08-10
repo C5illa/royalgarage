@@ -682,7 +682,7 @@
 
 
   /*------------------------------------*\
-    #IMPRESSZUM + POPUP IMPRESSZUM
+    #IMPRESSZUM & LOGIN + POPUP
   \*------------------------------------*/
   
   .impresszum__mail--link {
@@ -712,7 +712,7 @@
     opacity: 1;
   }
   
-  .popup__impresszum {
+  .popup__impresszum, .popup__login {
     margin: 40px auto;
     padding: 30px;
     background: rgba(10,10,10,.97);
@@ -725,7 +725,7 @@
     line-height: 1.3rem;
   }
   
-  .popup__impresszum .close {
+  .popup__impresszum .close, .popup__login .close {
     position: absolute;
     top: 20px;
     right: 30px;
@@ -736,12 +736,12 @@
     color: var(--font-grey);
   }
   
-  .popup__impresszum .close:hover {
+  .popup__impresszum .close:hover, .popup__login .close:hover {
     color: var(--yellow);
     transform: scale(1.1);
   }
  
-  .impresszum__content {
+  .impresszum__content, .login__content {
     color: var(--font-grey);
   }
   
@@ -758,7 +758,7 @@
     font-size: 1.02rem;
   }
   
-  .impresszum__heading {
+  .impresszum__heading, .login__heading {
     margin-top: 0;
     text-transform: uppercase;
     font-family: var(--heading-font);
@@ -767,7 +767,7 @@
     padding: 1rem;
   }
   
-  .impresszum__header--bold {
+  .impresszum__header--bold, .login__text--bold {
     color: var(--yellow);
     font-weight: 750;
     text-transform: uppercase;
@@ -775,12 +775,28 @@
     padding-bottom: 3px;
   }
   
+  .login__text--small {
+   color: var(--yellow);
+   letter-spacing: 1.3px;
+  }
 
-
+  .login__text--big {
+    font-family: var(--heading-font);
+    font-size: clamp(16px, 5vw, 32px);
+    color: var(--yellow);
+    font-weight: 700;
+    letter-spacing: 1.1px;
+    line-height: 1.4;
+  }
   
+  .login__icon {
+    width: 85px;
+    margin: 15px;
+    filter: var(--yellow-filter);
+  }
 
   @media screen and (max-width: 732px) {
-    .popup__impresszum {
+    .popup__impresszum, .popup__login {
     width: 85%;
   }
 }
