@@ -7,18 +7,18 @@
     --font-grey-hover:      #BABABA;
     --background-color:     #1B1D1E;
     --services-background:  #101010;
-    --yellow:               #FFC733;
+    --yellow:               #EAAE36;
     --heading-font:         "Montserrat", system-ui;
     --body-font:            "Quicksand", system-ui;
     --yellow-filter:        
     brightness(0) 
     saturate(100%) 
-    invert(95%) 
-    sepia(16%) 
-    saturate(7496%) 
-    hue-rotate(327deg) 
-    brightness(100%) 
-    contrast(100%);
+    invert(94%) 
+    sepia(8%) 
+    saturate(4950%) 
+    hue-rotate(324deg) 
+    brightness(90%) 
+    contrast(104%);
      --lightgrey-filter:
     brightness(0)
     saturate(100%) 
@@ -197,12 +197,12 @@
 
   .hero__text--normal, .hero__text--small {
     color: var(--yellow);
+    line-height: 1.4;
   }
 
   .hero__text--normal {
     font-weight: 600;
     font-size: clamp(14px, 5vw, 19px);
-    line-height: 1.4;
     letter-spacing: .3px;
     padding-top: 2.5rem;
   }
@@ -455,6 +455,7 @@
   .contact__icon--fb, .contact__icon--map, .contact__icon--mail {
     width: 60px;
     padding: .32rem;
+    filter: var(--yellow-filter);
   }
 
   .contact__icon--fb:hover, .contact__icon--map:hover, .contact__icon--mail:hover {
