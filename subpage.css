@@ -81,11 +81,12 @@
   }
 
   h1 {
-    font-size: clamp(14px, 4vw, 20px);
+    font-size: clamp(18px, 4.5vw, 28px);
+    line-height: 1.4;
     text-align: center;
     text-transform: uppercase;
     font-weight: 700;
-    padding: 2rem 0rem 0rem 0rem;
+    padding: 6cqw 0rem 2rem 0rem;
     color: var(--yellow);
   }
     
@@ -143,14 +144,16 @@ li li {
   
   header {
     text-align: center;
-    padding: 1rem;
   }
 
   .header__logo {
-    width: 130px;
+    width: 150px;
+    padding: 1rem;
   }
 
-
+  .section {
+    padding-bottom: 5rem;
+  }
 
   
 
