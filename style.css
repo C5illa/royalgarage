@@ -795,6 +795,10 @@
     filter: var(--yellow-filter);
   }
 
+  .login__icon:hover {
+    transform: scale(1.05);
+  }
+
   @media screen and (max-width: 732px) {
     .popup__impresszum, .popup__login {
     width: 85%;
