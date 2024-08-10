@@ -92,7 +92,6 @@
   }
     
   h2 {
-    text-align: left;
     font-size: clamp(12px, 3.8vw, 16px);
     font-weight: 600;
     margin-top: -1.5rem;
@@ -124,7 +123,7 @@
 
   .text__bold {
     font-weight: 550;
-    text-align: left;
+    text-align: center;
   }
 
   li {
