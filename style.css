@@ -134,7 +134,6 @@
   .navbar__logo {
     width: 40px;
     margin: 1rem 3rem .5rem 3rem;
-    filter: var(--lightgrey-filter);
   }
 
   .navbar__icons li {
