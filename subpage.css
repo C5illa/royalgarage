@@ -1,0 +1,208 @@
+/*------------------------------------*\
+  #VARIABLES
+\*------------------------------------*/
+ 
+:root {
+    --font-grey:            #E0E0E0;
+    --font-grey-hover:      #BABABA;
+    --background-color:     #1B1D1E;
+    --services-background:  #101010;
+    --yellow:               #FFC733;
+    --heading-font:         "Montserrat", system-ui;
+    --body-font:            "Quicksand", system-ui;
+    --yellow-filter:        
+    brightness(0) 
+    saturate(100%) 
+    invert(95%) 
+    sepia(16%) 
+    saturate(7496%) 
+    hue-rotate(327deg) 
+    brightness(100%) 
+    contrast(100%);
+     --lightgrey-filter:
+    brightness(0)
+    saturate(100%) 
+    invert(86%) 
+    sepia(3%) 
+    saturate(9%) 
+    hue-rotate(347deg) 
+    brightness(103%) 
+    contrast(95%);
+ }
+    
+    
+    
+    
+    
+  /*------------------------------------*\
+    #BOX-SIZING
+  \*------------------------------------*/
+    
+  * {
+    box-sizing: border-box;
+  }
+  
+  
+  
+  
+    
+  /*------------------------------------*\
+    #BODY
+  \*------------------------------------*/
+    
+  html {
+    margin: 0px;
+    padding: 0px;  
+    font-family: var(--body-font);
+    color: var(--font-grey);
+    background-color: var(--background-color);
+  }
+    
+  body {
+    width: 75%;
+    text-align: left;
+    margin: 0 auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    line-height: 1.5rem;
+  }
+    
+
+
+
+
+  /*------------------------------------*\
+    #FONTS
+  \*------------------------------------*/
+
+  h1, h2, h3, h4 {
+    font-family: var(--heading-font);
+    text-align: center;
+  }
+
+  h1 {
+    font-size: clamp(14px, 4vw, 20px);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 2rem 0rem 0rem 0rem;
+    color: var(--yellow);
+  }
+    
+  h2 {
+    text-align: center;
+    font-family: var(--font-pair);
+    color: var(--font-grey-hover);
+    text-transform: uppercase;
+    font-size: 1.3em;
+    padding-bottom: 3em;
+  }
+    
+  h3 {
+    font-size: 1em;
+    padding-bottom: 1.2em;
+    padding-top: 1.8em;
+    font-weight: bold;
+  }
+  
+  h4 {
+    font-size: clamp(10px, 2.5vw, 13px);
+    font-weight: 500;
+    line-height: 1.4;
+    padding-bottom: 1.5rem;
+  }
+  
+ .text__center {
+    text-align: center;
+    font-weight: 600;
+    font-size: clamp(12px, 3vw, 15px);
+}
+
+.text__bold {
+    font-weight: 550;
+    text-align: center;
+}
+
+li {
+    list-style: inside;
+    margin-left: 15px;
+}
+
+li li {
+    list-style: url('assets/icon_wrench.svg');
+    margin-left: 50px;
+}
+
+
+
+
+
+  /*------------------------------------*\
+    #SPACING
+  \*------------------------------------*/
+  
+  header {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .header__logo {
+    width: 130px;
+  }
+
+
+
+  
+
+  /*-----------------------------------*\
+    #BUTTONS
+  \*------------------------------------*/
+  
+  .close {
+    position: fixed;
+    top: 40px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 32px;
+    font-weight: bold;
+    text-decoration: none;
+    filter: var(--lightgrey-filter);
+  }
+  
+  .close:hover {
+    filter: var(--yellow-filter);
+    transform: scale(1.1);
+  }
+  
+  .button__wrapper {
+    display: flex;
+    width: 60%;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    padding-top: 4em;
+    padding-bottom: 3em;
+  }
+  
+  .button__back--link {
+    width: 40px;
+  }
+  
+  .button__back {
+    filter: var(--lightgrey-filter);
+  }
+
+  .button__back:hover {
+    transform: translateX(-5px);
+    filter: var(--yellow-filter);
+  }
+  
+
+  
+  
+  
+  @media (max-width: 860px) {
+  
+  p, li {
+    font-size: .9em;
+  }
+  }
