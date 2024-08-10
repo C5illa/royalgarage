@@ -597,7 +597,7 @@
   }
   
   #up-button:hover {
-    transform: translateY(-2px);
+    transform: translateY(-3px);
   }
   
   .footer__logo {
@@ -617,7 +617,7 @@
   }
   
   .footer__copyright--left, .footer__up {
-    width: calc(50% - 35px);
+    width: calc(50% - 25px);
   }
   
   .footer__copyright--date {
