@@ -9,7 +9,7 @@
     --services-background:  #101010;
     --yellow:               #FFC733;
     --heading-font:         "Montserrat", system-ui;
-    --body-font:            "Source Sans 3", sans-serif;
+    --body-font:            "Quicksand", system-ui;
     --yellow-filter:        
     brightness(0) 
     saturate(100%) 
@@ -67,7 +67,7 @@
     font-family: var(--heading-font);
     font-weight: 650;
     text-transform: uppercase;
-    line-height: 1.3;
+    line-height: 1.4;
     text-align: center;
   }
 
@@ -76,11 +76,11 @@
   }
 
   
-  h1 { font-size: clamp(14px, 5vw, 26px); }
+  h1 { font-size: clamp(16px, 5vw, 26px); }
   
-  h2 { font-size: clamp(12px, 4vw, 23px); }
+  h2 { font-size: clamp(13px, 4.5vw, 23px); }
   
-  h3 { font-size: clamp(10px, 4vw, 18px); } 
+  h3 { font-size: clamp(12px, 3.8vw, 16px); } 
   
   
   
@@ -150,14 +150,14 @@
   .navbar__menu ul {
     display: flex;
     flex-direction: row;
-    font-size: min(5vw, 16px);
+    font-size: min(5vw, 15px);
   }
 
   .navbar__menu--link {
     list-style: none;
     color: var(--font-grey);
     text-decoration: none;
-    font-weight: 650;
+    font-weight: 800;
     text-transform: uppercase;
     display: inline-block;
     text-align: center;
@@ -185,6 +185,7 @@
     justify-content: center;
     align-items: center;
     padding: 3rem 2rem 3rem 2rem;
+    font-family: var(--heading-font);
  }
   
   .hero__text {
@@ -201,15 +202,15 @@
   .hero__text--normal {
     font-weight: 600;
     font-size: clamp(14px, 5vw, 19px);
-    line-height: 1.15;
-    letter-spacing: 2.5px;
-    padding-top: 2rem;
+    line-height: 1.4;
+    letter-spacing: .3px;
+    padding-top: 2.5rem;
   }
 
   .hero__text--small {
-    font-size: 13px;
-    padding-top: 5px;
-    letter-spacing: 1.5px;
+    font-size: 12px;
+    padding-top: 8px;
+    letter-spacing: 1px;
   }
 
   .hero__text h2 {
@@ -298,16 +299,16 @@
     color: var(--background-color);
     padding: 2rem;
     text-align: center;
-    line-height: 1.35;
+    line-height: 1.15;
   }
 
   .about h2 {
-    padding-bottom: .9rem;
+    padding-bottom: .5rem;
     font-weight: 800;
   }
 
   .about__text {
-    font-weight: 500;
+    font-weight: 550;
     font-size: clamp(13px, 4vw, 16px);
     padding: 1.5rem;
   }
@@ -336,7 +337,7 @@
     column-gap: 15px;
     row-gap: 15px;
     place-items: stretch;
-    padding-bottom: 1em;
+    padding-bottom: 1rem;
     }
   
   .services__item {
@@ -354,9 +355,9 @@
   }
 
   .services__item--text {
-    line-height: 1.3;
-    font-weight: 450;
-    font-size: clamp(13px, 3.8vw, 15px);
+    line-height: 1.15;
+    font-weight: 500;
+    font-size: clamp(12px, 3.8vw, 15px);
     color: var(--font-grey-hover);
   }
   
@@ -398,7 +399,7 @@
     display: grid;
     grid-template-columns: 37% 26% 37%;
     grid-template-rows: repeat(1, 1fr);
-    column-gap: 10px;
+    column-gap: 5px;
     place-items: stretch;
     padding-bottom: 1rem;
   }
@@ -415,19 +416,21 @@
   }
 
   .contact__text--big {
-    font-size: clamp(18px, 5vw, 28px);
+    font-size: clamp(20px, 5vw, 28px);
     font-weight: 800;
   }
 
   .contact__text--medium {
     font-size: clamp(14px, 4.5vw, 20px);
     font-weight: 800;
+    line-height: 1.1;
   }
 
   .contact__text--small {
     font-size: clamp(9px, 3.8vw, 14px);
-    font-weight: 400;
+    font-weight: 450;
     padding-top: .3rem;
+    line-height: 1.15;
   }
 
   .contact__dark-bg {
@@ -463,12 +466,11 @@
     font-weight: 300;
     margin-top: -10px;
     padding-bottom: 1rem;
-    letter-spacing: 1.01px;
+    letter-spacing: 1px;
   }
 
   .contact__dark--address {
-
-    letter-spacing: 1.1px;
+    letter-spacing: 1px;
     padding: 1rem;
   }
 
@@ -505,12 +507,16 @@
     align-items: center;
  }
 
+ iframe {
+   border-radius: 32px;
+ }
+
  .google__map {
     width: 70%;
-    height: 320px;
+    height: 350px;
     padding: 1.5rem;
  }
-  
+
  .map__review--open, .map__review--link {
     text-decoration: none;
     font-weight: 450;
