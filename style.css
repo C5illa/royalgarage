@@ -68,11 +68,14 @@
     font-weight: 650;
     text-transform: uppercase;
     line-height: 1.4;
-    text-align: center;
   }
 
   h3 {
     padding: .5rem 0 1rem 0;
+  }
+
+  h2 {
+    text-align: center;
   }
 
   
@@ -191,7 +194,7 @@
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    text-align: center;
+    text-align: left;
   }
 
   .hero__text--normal, .hero__text--small {
@@ -257,6 +260,10 @@
  
  @media (max-width: 870px) {
    
+   .hero__text {
+    text-align: center;
+   }
+
    .hero {
     flex-direction: column;
    }
@@ -297,7 +304,7 @@
     background-color: var(--yellow);
     color: var(--background-color);
     padding: 2rem;
-    text-align: center;
+    text-align: left;
     line-height: 1.15;
   }
 
@@ -320,7 +327,7 @@
   \*------------------------------------*/
   
   #services {
-    text-align: center;
+    text-align: left;
   }
 
   #services h2 {
@@ -347,6 +354,7 @@
 
   .services__item h3 {
     color: var(--yellow);
+    text-align: center;
   }
 
   .services__item:hover {
@@ -362,7 +370,7 @@
   
   @media (max-width: 900px) {
     
-  .services__container {
+   .services__container {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
   }
