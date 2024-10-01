@@ -228,12 +228,13 @@
   }
   
   .hero__button--link {
-    padding-top: 2.2rem;
+    padding-top: 3rem;
   }
 
   .hero__button {
     padding: .8rem;
     font-family: var(--heading-font);
+    text-decoration: none;
     color: var(--background-color);
     font-weight: 800;
     text-transform: uppercase;
