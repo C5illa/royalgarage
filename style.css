@@ -252,6 +252,7 @@
       width: 90%;
     }
 
+
   }
 
 
@@ -344,6 +345,12 @@
   }
   
 
+  @media (min-width: 1200px) {
+  .about__text {
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+  }
+}
   
   
   /*------------------------------------*\
@@ -408,7 +415,11 @@
    }
 }
   
-  
+@media (min-width: 1200px) {
+  .services__container {
+    width: 82%;
+  }
+}
   
 
 
